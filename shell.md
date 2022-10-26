@@ -9,3 +9,9 @@ grep -r --include "*.txt" texthere .
 grep -rl oldtext . | xargs sed -i 's/oldtext/newtext/g'
 ```
 [источник](https://stackoverflow.com/a/22385837/14857550)
+
+### Заменить подстроку в файлах которые совпадают по маске
+
+```
+grep -rl --include "*.subpath.*" ".commandOld(" . | xargs sed -i 's/\.commandOld(/\.commandNew(/g'
+```
