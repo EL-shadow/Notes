@@ -3,3 +3,4 @@
 
 ## Разделы
 * [Ubuntu](ubuntu.md)
+* [Shell](ubuntu.md)
