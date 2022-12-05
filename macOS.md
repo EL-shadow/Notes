@@ -3,8 +3,9 @@
 
 
 ## Скрытые файлы
-`defaults write com.apple.finder AppleShowAllFiles YES && killall Finder`
-`defaults write com.apple.finder AppleShowAllFiles NO && killall Finder`
+
+* Включить `defaults write com.apple.finder AppleShowAllFiles YES && killall Finder`
+* Выключить `defaults write com.apple.finder AppleShowAllFiles NO && killall Finder`
 
 
 ## Скриншоты
