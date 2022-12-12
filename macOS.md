@@ -27,3 +27,17 @@
 
 
 `kill -9` SIGKILL https://ru.wikipedia.org/wiki/SIGKILL
+
+
+## Софт
+### iTerm2 настроить поведение
+* cmd ,   - Profiles - colors - Color Presets...[Solarized dark] - Minimum contrast 20%
+* cmd ,   - Profiles - Keys - add ⌥ ← Action Send Escape sequence Esc+b
+* cmd ,   - Profiles - Keys - add ⌥ → Action Send Escape sequence Esc+f
+* cmd ,   - Appearance - Panes - uncheck Show per-pane title bar with split panes
+* cmd ,   - Profiles - General - Working Directory - Reuse previous session's directory
+
+
+#### Кодировка в SSH Iterm2
+* добавить в ~/.zshrc или ~/.bashrc
+`export LC_ALL='en_US.UTF-8'`
