@@ -22,3 +22,6 @@ Use the su command to switch to the new user account.
 
 ### Set new passwd:
 ```$ sudo passwd root```
+
+### Test
+ololo
