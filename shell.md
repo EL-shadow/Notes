@@ -22,5 +22,16 @@ uniq -u file.txt
 ```
 [источник](https://stackoverflow.com/a/13778360/14857550)
 
+Убедитесь что строки отсортированы, если нет то
+
+```
+sort file.txt | uniq -u
+```
+
+Если файл большой и сортировка слишком долгая то
+```
+awk '!seen[$0]++' file.txt
+```
+
 ### Шебанг
 `#!` - Шебанг https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D0%B1%D0%B0%D0%BD%D0%B3_(Unix)
