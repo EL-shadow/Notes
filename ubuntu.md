@@ -10,15 +10,18 @@
 `$ sudo reboot`
 
 ### Ubuntu create sudo user:
-1. `# adduser username`
+1. `# adduser %username%`
 2. Enter new UNIX password
-`# usermod -aG sudo username`
+`# usermod -aG sudo %username%`
 
 Use the su command to switch to the new user account.
-`# su - username`
+`# su - %username%`
 
 ### Delete user passwd:
 ```$ sudo passwd -dl root```
 
 ### Set new passwd:
 ```$ sudo passwd root```
+
+### Delete user passwd:
+```$ sudo userdel %username%```
