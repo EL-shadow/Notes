@@ -77,3 +77,13 @@ gunzip -c архив.gz
 Чтобы сжать папку в Linux вам придется сначала заархивировать ее с помощью tar
 
 [источник](https://losst.pro/arhivatsiya-v-linux#gzip)
+
+
+### CURL
+**Скачать курлом как wget**
+```
+curl http://127.0.0.1:8000 -o outfile
+```
+Note that curl does not follow redirects by default. To tell it to do so, add -L to the argument list.
+
+[источник](https://stackoverflow.com/a/4572158/14857550)
