@@ -88,6 +88,26 @@ Note that curl does not follow redirects by default. To tell it to do so, add -L
 
 [источник](https://stackoverflow.com/a/4572158/14857550)
 
+**Скачать все файылы из списка**
+```
+curl … $(cat urls.txt)
+```
+[источник](https://unix.stackexchange.com/a/282143)
+
+```
+xargs -n 1 curl -O < your_files.txt
+```
+[источник](https://serverfault.com/a/722874)
+
+Если нвоые имена файлов нужно явно задать то `curl -o new_file_name.jpg url`
+
+**Переименовать скачанный файл с датой**
+```
+curl -o prefix-$(date +%H-%M) http://example.com/
+```
+Например `curl -o $(date +%Y-%m-%d_%H-%M-%S).jpg http://example.com/img.jpg`
+[источник](https://stackoverflow.com/questions/37409968/add-timestamp-to-filename-in-curl-command)
+
 ### Рекурсивно переименовать файлы с именем по дате создания
 ```
 ls -l -D %Y-%m-%d_%H-%M-%S *.jpg | cut -d " " -f9 -f10 | cat -n | while read n b f; do mv -n  "$f" "$b---$n.jpg"; done 
@@ -95,6 +115,7 @@ ls -l -D %Y-%m-%d_%H-%M-%S *.mp4 | tr -s ' ' | cut -d " " -f7 -f8 | cat -n | whi
 ```
 По шагам:
 1. `ls -l` - выводим список файлов с расширенной инфой о каждом файле
+g
 2. `ls -l *.jpg` - фильтруем только нужное расширение
 3. `ls -l -D %Y-%m-%d_%H-%M-%S *.jpg` - `-D` указываем желаемый формат даты
 4. `| cut -d ' ' -f1 ` - сплитим строку по символу разделителю пробел в кавычках и номера желаемых подстрок для вывода, например вхождение 9 `-f9`
