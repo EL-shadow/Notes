@@ -88,6 +88,14 @@ Note that curl does not follow redirects by default. To tell it to do so, add -L
 
 [источник](https://stackoverflow.com/a/4572158/14857550)
 
+**Подстановка env переменных в запрос**
+```
+--header "access_token: $SOME_ENV_TOKEN"
+```
+просто использовать двойные кавычки, т.к. одинарные `'` отключает выполнение переменных
+
+[источник](https://stackoverflow.com/questions/67924837/how-can-i-set-the-environment-variable-in-request-header-for-curl)
+
 **Скачать все файылы из списка**
 ```
 curl … $(cat urls.txt)
