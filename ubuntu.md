@@ -23,5 +23,5 @@ Use the su command to switch to the new user account.
 ### Set new passwd:
 ```$ sudo passwd root```
 
-### Delete user passwd:
+### Delete user:
 ```$ sudo userdel %username%```
